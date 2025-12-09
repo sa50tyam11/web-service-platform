@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" type="logo/jpg" href="assets/logo.jpg">
+  <title>REDWORK — Websites That Get You Clients</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="/mnt/data/A_logo_design_in_a_digital_image_displays_the_text.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "oVtWwBC7fHgP0nCP6",
+      });
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <div class="brand">
+        <img src="assets/rw logo.jpg" alt="REDWORK" class="brand-logo">
+        <span class="brand-name">RED<strong>WORK</strong></span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact" class="cta">Hire Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-bg">
+        <div class="bg-layer layer layer--far"></div>
+        <div class="bg-layer layer layer--mid"></div>
+        <div class="bg-layer layer layer--near"></div>
+      </div>
+
+      <div class="hero-inner container">
+        <div class="hero-left">
+          <p class="eyebrow">REDWORK</p>
+
+          <h1 class="hero-title">
+            We Build Websites That Help You
+            <span>Get Clients & Grow Online</span>
+          </h1>
+
+          <p class="hero-lead">
+            REDWORK is a premium web design studio creating fast, secure and modern websites
+            for businesses, startups & students — with clear pricing, fast delivery and full support.
+          </p>
+
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#contact">Get Your Website</a>
+            <a class="btn btn-ghost" href="#work">View Real Projects</a>
+          </div>
+
+          <ul class="trust">
+            <li>50+ Projects Delivered</li>
+            <li>Fast Turnaround</li>
+            <li>Affordable Pricing</li>
+            <li>Post-Delivery Support</li>
+          </ul>
+        </div>
+
+        <div class="hero-right tilt-3d">
+          <div class="device-mock">
+            <img src="assets/work RW.jpg" alt="REDWORK website preview" class="device-image">
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-down" href="#services" aria-label="Scroll down">Scroll</a>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container narrow">
+        <h2 class="section-title reveal">Our Services</h2>
+        <p class="section-sub reveal">
+          Professional website solutions for businesses and complete project support for students.
+        </p>
+
+        <div class="grid features">
+          <article class="feature card tilt-3d reveal">
+            <h3>For Businesses</h3>
+            <p>
+              Business websites, landing pages, portfolio sites, redesigns,
+              WhatsApp integration and performance-optimized UI.
+            </p>
+          </article>
+
+          <article class="feature card tilt-3d reveal">
+            <h3>For Students</h3>
+            <p>
+              Mini projects, final year projects, documentation, PPT,
+              viva preparation and clean source code.
+            </p>
+          </article>
+
+          <article class="feature card tilt-3d reveal">
+            <h3>Frontend Specialization</h3>
+            <p>
+              We currently specialize in frontend & UI-focused projects.
+              Backend-powered services launching soon.
+            </p>
+          </article>
+        </div>
+
+        <p class="section-note">
+          Not sure what you need? Get a <strong>free consultation on WhatsApp.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section alt">
+      <div class="container">
+        <h2 class="section-title reveal">Featured Work</h2>
+        <p class="section-sub reveal">
+          Real projects we’ve built for businesses and students, focused on clean UI and clear results.
+        </p>
+
+        <div class="work-grid advanced">
+
+          <!-- Cake Website -->
+          <div class="work-card reveal tilt-3d">
+            <img src="assets/cake web.png" alt="Cake Website">
+            <div class="work-info">
+              <h3>Cake Shop Website</h3>
+              <p><strong>Type:</strong> Business website</p>
+              
+              <p><strong>Overview:</strong> A modern, responsive website for a cake shop with product sections and call-to-action buttons.</p>
+              <div class="work-links">
+                <a href="https://sa50tyam11.github.io/Cake-Shop/" target="_blank" class="btn btn-ghost">Live Demo</a>
+                <a href="#contact" class="btn btn-primary">Order Similar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio -->
+          <div class="work-card reveal tilt-3d">
+            <img src="assets/portfolio.jpg" alt="Portfolio Website">
+            <div class="work-info">
+              <h3>Personal Portfolio</h3>
+              <p><strong>Type:</strong> Portfolio website</p>
+              
+              <p><strong>Overview:</strong> Clean personal portfolio with project gallery, about section and contact integration.</p>
+              <div class="work-links">
+                <a href="#" target="_blank" class="btn btn-ghost">Live Demo</a>
+                <a href="#contact" class="btn btn-primary">Order Similar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Landing Page -->
+          <div class="work-card reveal tilt-3d">
+            <img src="assets/elv pd.png" alt="Landing Page">
+            <div class="work-info">
+              <h3>Product Landing Page</h3>
+              <p><strong>Type:</strong> Landing page</p>
+              
+              <p><strong>Overview:</strong> High-conversion landing page with sections for features, benefits and call-to-action.</p>
+              <div class="work-links">
+                <a href="#" target="_blank" class="btn btn-ghost">Live Demo</a>
+                <a href="#contact" class="btn btn-primary">Order Similar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- E-commerce Website -->
+          <div class="work-card reveal tilt-3d">
+            <img src="assets/work3 e.jpg" alt="E-commerce Website">
+            <div class="work-info">
+              <h3>E-commerce Website UI</h3>
+              <p><strong>Type:</strong> E-commerce frontend</p>
+              
+              <p><strong>Overview:</strong> Product listing, product details layout and cart UI for an online shopping experience.</p>
+              <div class="work-links">
+                <a href="#" target="_blank" class="btn btn-ghost">Live Demo</a>
+                <a href="#contact" class="btn btn-primary">Order Similar</a>
+              </div>
+            </div>
+          </div>
+
+        <p class="section-note">
+          Want a similar website or project? <strong>Contact us on WhatsApp or via the form below.</strong>
+        </p>
+      </div>
+    </section>
+    <section class="section">
+  <div class="container narrow">
+    <h2 class="section-title reveal">What Clients Say</h2>
+    <p class="section-sub reveal">Real feedback from students and business owners we've worked with.</p>
+
+    <div class="testimonial-grid">
+
+      <div class="testimonial-card reveal">
+        <p>“REDWORK delivered my business website exactly how I wanted. Clean design, fast delivery, and very easy to communicate with.”</p>
+        <h4>— Rajesh Kumar, Local Business Owner</h4>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <p>“I got my final-year project made from REDWORK. The documentation + PPT + viva notes helped me score easily. Highly recommended!”</p>
+        <h4>— Anjali Singh, BCA Student</h4>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <p>“Very professional work. My landing page looks modern and loads fast. Great value for money.”</p>
+        <h4>— Manish Gupta, Startup Founder</h4>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- WHY REDWORK -->
+    <section class="section">
+      <div class="container narrow">
+        <h2 class="section-title reveal">Why Choose REDWORK</h2>
+        <div class="grid features">
+          <div class="card reveal">Professional, modern designs</div>
+          <div class="card reveal">Fast project delivery</div>
+          <div class="card reveal">Student & business friendly pricing</div>
+          <div class="card reveal">Clear, simple communication</div>
+          <div class="card reveal">Post-delivery support</div>
+          <div class="card reveal">Transparent work process</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section">
+      <div class="container narrow">
+        <h2 class="section-title reveal">Pricing</h2>
+        <p class="section-sub reveal">Clear plans for students and businesses.</p>
+
+        <h3 class="pricing-label reveal">Student Project Plans</h3>
+        <div class="pricing-grid">
+          <!-- Student Mini -->
+          <div class="pricing-card flip-card reveal" onclick="flipCard(this)">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <h3>Mini Project</h3>
+                <p class="price">₹799</p>
+                <p class="muted">Frontend mini or basic app</p>
+              </div>
+              <div class="flip-back">
+                <ul>
+                  <li>✅ 1 frontend project (HTML, CSS, JS)</li>
+                  <li>✅ Clean and readable code</li>
+                  <li>✅ Basic documentation</li>
+                  <li>✅ 7 days support</li>
+                </ul>
+                <a class="btn btn-primary"
+                   href="https://wa.me/917667261838?text=Hi%20REDWORK%2C%20I%20want%20a%20Mini%20Student%20Project."
+                   target="_blank">Order on WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Student Pro -->
+          <div class="pricing-card flip-card reveal highlight" onclick="flipCard(this)">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <span class="badge">Popular</span>
+                <h3>Pro Project</h3>
+                <p class="price">₹1,499</p>
+                <p class="muted">Advanced UI + JS logic</p>
+              </div>
+              <div class="flip-back">
+                <ul>
+                  <li>✅ Advanced frontend / JS app</li>
+                  <li>✅ Documentation + PPT</li>
+                  <li>✅ Viva preparation notes</li>
+                  <li>✅ 10 days support</li>
+                </ul>
+                <a class="btn btn-primary"
+                   href="https://wa.me/917667261838?text=Hi%20REDWORK%2C%20I%20want%20a%20Pro%20Student%20Project."
+                   target="_blank">Order on WhatsApp</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Student Final -->
+          <div class="pricing-card flip-card reveal" onclick="flipCard(this)">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <h3>Final Year Project</h3>
+                <p class="price">₹2,999+</p>
+                <p class="muted">Complete project package</p>
+              </div>
+              <div class="flip-back">
+                <ul>
+                  <li>✅ Full frontend project</li>
+                  <li>✅ Complete documentation</li>
+                  <li>✅ PPT + viva notes</li>
+                  <li>✅ Deployment & setup guide</li>
+                </ul>
+                <a class="btn btn-primary"
+                   href="https://wa.me/917667261838?text=Hi%20REDWORK%2C%20I%20want%20a%20Final%20Year%20Project."
+                   target="_blank">Order on WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="pricing-label reveal" style="margin-top:40px;">Business Website Plans</h3>
+        <div class="business-pricing-grid">
+          <div class="business-card reveal">
+            <h4>Starter Website</h4>
+            <p class="price">₹3,999</p>
+            <ul>
+              <li>3–4 pages</li>
+              <li>Mobile-friendly design</li>
+              <li>WhatsApp integration</li>
+              <li>Basic SEO-ready structure</li>
+            </ul>
+          </div>
+          <div class="business-card reveal">
+            <h4>Business Website</h4>
+            <p class="price">₹7,999</p>
+            <ul>
+              <li>6–8 pages</li>
+              <li>Custom UI design</li>
+              <li>Lead/contact forms</li>
+              <li>Performance optimized</li>
+            </ul>
+          </div>
+          <div class="business-card reveal">
+            <h4>E-commerce UI</h4>
+            <p class="price">₹11,999+</p>
+            <ul>
+              <li>Product listing & detail pages</li>
+              <li>Cart & checkout UI</li>
+              <li>Ready for backend integration</li>
+              <li>Responsive layout</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="section-note">
+          ✅ No hidden charges • ✅ Clear pricing • ✅ Satisfaction focused
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section alt">
+      <div class="container narrow">
+        <h2 class="section-title reveal">About REDWORK</h2>
+        <p class="section-sub reveal">
+          REDWORK is an independent web studio focused on building fast, modern and result-driven
+          websites for small businesses, startups and students. We specialize in frontend & UI-focused
+          solutions. Backend-powered projects are launching soon.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container narrow">
+        <h2 class="section-title reveal">Get a Free Consultation</h2>
+        <p class="section-sub reveal">
+          Tell us about your project. We usually reply within 24 hours.
+        </p>
+
+        <div class="contact-grid reveal">
+          <form id="contactForm" class="contact-form">
+            <input name="name" type="text" placeholder="Your name" required>
+            <input name="email" type="email" placeholder="Email" required>
+            <textarea name="message" rows="5" placeholder="Project details" required></textarea>
+
+            <div class="form-actions">
+              <!-- Email Button -->
+              <button class="btn btn-primary" type="submit">Send Email</button>
+
+              <!-- WhatsApp Button -->
+              <button class="btn btn-ghost" type="button" id="whatsappBtn">WhatsApp</button>
+
+              <!-- Call Button -->
+              <a class="btn btn-ghost" href="tel:+917667261838">Call</a>
+            </div>
+
+            <p class="form-note">Your information is 100% secure. No spam. No pressure.</p>
+          </form>
+
+          <div class="contact-side tilt-3d">
+            <h3>Why clients work with REDWORK</h3>
+            <ul>
+              <li>Professional & modern design</li>
+              <li>Fast and reliable delivery</li>
+              <li>Student & business friendly pricing</li>
+            </ul>
+            <a class="btn btn-outline" href="#pricing">View all plans</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS WE USE -->
+    <section id="tools" class="section">
+      <div class="container narrow">
+        <h2 class="section-title reveal">Tools We Use</h2>
+        <p class="section-sub reveal">Modern technologies behind every REDWORK build.</p>
+
+        <div class="tools-grid">
+          <div class="tool-card reveal tilt-3d">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+            <span>HTML5</span>
+          </div>
+
+          <div class="tool-card reveal tilt-3d">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+            <span>CSS3</span>
+          </div>
+
+          <div class="tool-card reveal tilt-3d">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+            <span>JavaScript</span>
+          </div>
+
+          <div class="tool-card reveal tilt-3d">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+            <span>React</span>
+          </div>
+
+          <div class="tool-card reveal tilt-3d">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node">
+            <span>Node.js</span>
+          </div>
+
+          <div class="tool-card reveal tilt-3d">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+            <span>Firebase</span>
+          </div>
+
+          <div class="tool-card reveal tilt-3d">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+            <span>MySQL</span>
+          </div>
+
+          <div class="tool-card reveal tilt-3d">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+            <span>Figma</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FLOATING WHATSAPP -->
+  <a
+    href="https://wa.me/917667261838?text=Hi%20REDWORK%2C%20I%20want%20to%20discuss%20a%20website%20or%20project."
+    class="floating-whatsapp"
+    target="_blank"
+    aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>REDWORK <span id="year"></span> — Websites that get you clients.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
