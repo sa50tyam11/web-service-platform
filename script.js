@@ -44,34 +44,49 @@ if (yearEl) {
 }
 
 // ================= CONTACT FORM (EmailJS + WhatsApp) =================
+
+// Initialize EmailJS (REQUIRED)
+(function () {
+  emailjs.init("oVtWwBC7fHgP0nCP6");
+})();
+
 const contactForm = document.getElementById("contactForm");
 const whatsappBtn = document.getElementById("whatsappBtn");
 
-// Email submit using EmailJS (replace service_id and template_id with your real ones)
 if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // TODO: set your own EmailJS service and template IDs
-    const serviceId = "your_service_id";
-    const templateId = "your_template_id";
-
-    if (!serviceId || !templateId || serviceId === "your_service_id") {
-      alert("Email sending is not configured yet. Please update EmailJS service/template IDs in script.js.");
-      return;
-    }
+    // ✅ REAL EmailJS IDs 
+    const serviceId = "service_qej52mu";
+    const templateId = "template_m2m4xcr";
 
     emailjs
-      .sendForm(serviceId, templateId, "#contactForm")
-      .then(() => {
-        alert("Message sent successfully. We'll get back to you soon.");
+      .sendForm(serviceId, templateId, contactForm)
+      .then(function () {
+        alert("Message sent successfully! I’ll contact you shortly.");
         contactForm.reset();
       })
-      .catch(() => {
-        alert("Something went wrong. Please try WhatsApp or Call.");
+      .catch(function (error) {
+        console.error("EmailJS error:", error);
+
+        // ✅ Fallback so you NEVER lose a lead
+        window.location.href =
+          "https://wa.me/917667261838?text=Hi%20REDWORK%2C%20I%20tried%20sending%20a%20message%20from%20your%20website%20but%20the%20email%20didn’t%20go%20through.";
       });
   });
 }
+
+// WhatsApp button
+if (whatsappBtn) {
+  whatsappBtn.addEventListener("click", function () {
+    window.open(
+      "https://wa.me/917667261838?text=Hi%20REDWORK%2C%20I%20want%20to%20discuss%20a%20project.",
+      "_blank"
+    );
+  });
+}
+
 
 // WhatsApp button behavior
 if (whatsappBtn && contactForm) {
