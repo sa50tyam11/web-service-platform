@@ -568,3 +568,21 @@ body{
   color: #fff;
   font-size: 0.9rem;
 }
+
+/* footer */
+.footer-socials {
+  margin-top: 10px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.footer-socials a {
+  color: var(--muted);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
