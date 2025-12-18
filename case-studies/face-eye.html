@@ -1,154 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Face & Eye Detection — Student Project Case Study</title>
 
-  <!-- IMPORTANT: one level up -->
-  <link rel="stylesheet" href="../style.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face & Eye Detection — Student Project Case Study</title>
+
+    <!-- IMPORTANT: one level up -->
+    <link rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="nav-wrap">
-    <nav class="nav container">
-      <div class="brand">
-        <span class="brand-name">RED<strong>WORK</strong></span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../work.html">Work</a></li>
-        <li><a href="../services.html">Services</a></li>
-        <li><a href="../contact.html" class="cta">Hire Me</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- HEADER -->
+    <header class="nav-wrap">
+        <nav class="nav container">
+            <div class="brand">
+                <span class="brand-name">RED<strong>WORK</strong></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../work.html">Work</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../contact.html" class="cta">Hire Me</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main class="section">
-    <div class="container narrow">
+    <main class="section">
+        <div class="container narrow">
 
-      <!-- TITLE -->
-      <h1 class="section-title">Face & Eye Detection System</h1>
-      <p class="section-sub">
-        Student Academic Project · Computer Vision
-      </p>
+            <!-- TITLE -->
+            <h1 class="section-title">Face & Eye Detection System</h1>
+            <p class="section-sub">
+                Student Academic Project · Computer Vision
+            </p>
 
-      <!-- META -->
-      <ul class="project-meta">
-        <li><strong>Role:</strong> Student Developer</li>
-        <li><strong>Tech Stack:</strong> C++, OpenCV</li>
-        <li><strong>Project Type:</strong> Academic / Learning Project</li>
-      </ul>
+            <!-- META -->
+            <ul class="project-meta">
+                <li><strong>Role:</strong> Student Developer</li>
+                <li><strong>Tech Stack:</strong> C++, OpenCV</li>
+                <li><strong>Project Type:</strong> Academic / Learning Project</li>
+            </ul>
 
-      <!-- OVERVIEW -->
-      <section class="case-block">
-        <h2>Project Overview</h2>
-        <p>
-          This project was developed as an academic exercise to understand
-          the fundamentals of computer vision and real-time image processing.
-          The system detects human faces and eyes from a live camera feed
-          using classical OpenCV techniques.
-        </p>
-      </section>
+            <!-- OVERVIEW -->
+            <section class="case-block">
+                <h2>Project Overview</h2>
+                <p>
+                    This project was developed as an academic exercise to understand
+                    the fundamentals of computer vision and real-time image processing.
+                    The system detects human faces and eyes from a live camera feed
+                    using classical OpenCV techniques.
+                </p>
+            </section>
 
-      <!-- PROBLEM -->
-      <section class="case-block">
-        <h2>Problem Statement</h2>
-        <p>
-          Detecting facial features in real-time is a foundational challenge
-          in computer vision. The objective was to build a simple yet reliable
-          system that could detect faces and eyes efficiently without relying
-          on cloud services or heavy machine learning models.
-        </p>
-      </section>
+            <!-- PROBLEM -->
+            <section class="case-block">
+                <h2>Problem Statement</h2>
+                <p>
+                    Detecting facial features in real-time is a foundational challenge
+                    in computer vision. The objective was to build a simple yet reliable
+                    system that could detect faces and eyes efficiently without relying
+                    on cloud services or heavy machine learning models.
+                </p>
+            </section>
 
-      <!-- OBJECTIVES -->
-      <section class="case-block">
-        <h2>Project Objectives</h2>
-        <ul>
-          <li>Understand image processing basics using OpenCV</li>
-          <li>Implement real-time face and eye detection</li>
-          <li>Optimize performance for low-end systems</li>
-          <li>Keep the solution explainable for academic evaluation</li>
-        </ul>
-      </section>
+            <!-- OBJECTIVES -->
+            <section class="case-block">
+                <h2>Project Objectives</h2>
+                <ul>
+                    <li>Understand image processing basics using OpenCV</li>
+                    <li>Implement real-time face and eye detection</li>
+                    <li>Optimize performance for low-end systems</li>
+                    <li>Keep the solution explainable for academic evaluation</li>
+                </ul>
+            </section>
 
-      <!-- SOLUTION -->
-      <section class="case-block">
-        <h2>Solution Approach</h2>
-        <p>
-          The system uses Haar Cascade classifiers provided by OpenCV
-          to detect facial features. Frames are captured from a webcam,
-          converted to grayscale, and processed in real-time to identify
-          faces and eyes.
-        </p>
-        <p>
-          This approach was chosen because it is lightweight, fast,
-          and suitable for systems without GPU acceleration.
-        </p>
-      </section>
+            <!-- SOLUTION -->
+            <section class="case-block">
+                <h2>Solution Approach</h2>
+                <p>
+                    The system uses Haar Cascade classifiers provided by OpenCV
+                    to detect facial features. Frames are captured from a webcam,
+                    converted to grayscale, and processed in real-time to identify
+                    faces and eyes.
+                </p>
+                <p>
+                    This approach was chosen because it is lightweight, fast,
+                    and suitable for systems without GPU acceleration.
+                </p>
+            </section>
 
-      <!-- FEATURES -->
-      <section class="case-block">
-        <h2>Key Features</h2>
-        <ul>
-          <li>Real-time face detection from webcam feed</li>
-          <li>Eye detection within detected face regions</li>
-          <li>Efficient processing using grayscale frames</li>
-          <li>Simple bounding box visualization</li>
-        </ul>
-      </section>
+            <!-- FEATURES -->
+            <section class="case-block">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Real-time face detection from webcam feed</li>
+                    <li>Eye detection within detected face regions</li>
+                    <li>Efficient processing using grayscale frames</li>
+                    <li>Simple bounding box visualization</li>
+                </ul>
+            </section>
 
-      <!-- CHALLENGES -->
-      <section class="case-block">
-        <h2>Challenges Faced</h2>
-        <ul>
-          <li>Handling varying lighting conditions</li>
-          <li>Reducing false positives</li>
-          <li>Maintaining real-time performance</li>
-          <li>Balancing accuracy and speed</li>
-        </ul>
-      </section>
+            <!-- CHALLENGES -->
+            <section class="case-block">
+                <h2>Challenges Faced</h2>
+                <ul>
+                    <li>Handling varying lighting conditions</li>
+                    <li>Reducing false positives</li>
+                    <li>Maintaining real-time performance</li>
+                    <li>Balancing accuracy and speed</li>
+                </ul>
+            </section>
 
-      <!-- OUTCOME -->
-      <section class="case-block">
-        <h2>Outcome</h2>
-        <p>
-          The project successfully demonstrated real-time face and eye detection
-          using classical computer vision techniques. It met academic expectations
-          and provided hands-on experience with OpenCV and C++.
-        </p>
-      </section>
+            <!-- OUTCOME -->
+            <section class="case-block">
+                <h2>Outcome</h2>
+                <p>
+                    The project successfully demonstrated real-time face and eye detection
+                    using classical computer vision techniques. It met academic expectations
+                    and provided hands-on experience with OpenCV and C++.
+                </p>
+            </section>
 
-      <!-- LEARNINGS -->
-      <section class="case-block">
-        <h2>Learning Outcomes</h2>
-        <ul>
-          <li>Practical understanding of OpenCV workflows</li>
-          <li>Experience with real-time image processing</li>
-          <li>Improved problem-solving and debugging skills</li>
-          <li>Confidence explaining computer vision concepts during viva</li>
-        </ul>
-      </section>
+            <!-- LEARNINGS -->
+            <section class="case-block">
+                <h2>Learning Outcomes</h2>
+                <ul>
+                    <li>Practical understanding of OpenCV workflows</li>
+                    <li>Experience with real-time image processing</li>
+                    <li>Improved problem-solving and debugging skills</li>
+                    <li>Confidence explaining computer vision concepts during viva</li>
+                </ul>
+            </section>
 
-      <!-- NOTE -->
-      <section class="case-block note">
-        <p>
-          <strong>Note:</strong> This project was developed strictly for academic
-          and learning purposes and does not claim production-level accuracy.
-        </p>
-      </section>
+            <!-- NOTE -->
+            <section class="case-block note">
+                <p>
+                    <strong>Note:</strong> This project was developed strictly for academic
+                    and learning purposes and does not claim production-level accuracy.
+                </p>
+            </section>
 
-      <!-- CTA -->
-      <div class="case-cta">
-        <a href="../work.html" class="btn btn-ghost">← Back to Work</a>
-        <a href="../contact.html" class="btn btn-primary">Need a Student Project?</a>
-      </div>
+            <!-- CTA -->
+            <div class="case-cta">
+                <a href="../work.html" class="btn btn-ghost">← Back to Work</a>
+                <a href="../contact.html" class="btn btn-primary">Need a Student Project?</a>
+            </div>
 
-    </div>
-  </main>
+        </div>
+    </main>
+    <script src="../script.js" defer></script>
 
 </body>
+
 </html>

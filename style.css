@@ -881,3 +881,96 @@ body {
     padding: 22px;
   }
 }
+
+/* ===============================
+   MOBILE NAVIGATION
+================================ */
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile menu panel */
+@media (max-width: 920px) {
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, #040406, #0b0b0d);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(.2,.9,.3,1);
+    z-index: 1100;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+  }
+}
+
+/* ===== NAV FORCE FIX ===== */
+
+.nav-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;        /* higher than everything */
+  pointer-events: auto;
+}
+
+.nav {
+  height: 64px;
+}
+
+.hero,
+.hero-bg,
+.hero-overlay {
+  z-index: 1;
+}
+
+.nav-toggle {
+  position: relative;
+  z-index: 100000;
+}
+/* ===== NAV VISUAL FIX ===== */
+
+.nav {
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 0 16px;
+}
+
+.brand-name {
+  font-size: 20px;
+}
+
+.nav-toggle {
+  font-size: 28px;
+  color: #fff;
+}
