@@ -111,19 +111,22 @@ const obs = new IntersectionObserver(entries => {
 });
 reveals.forEach(r => obs.observe(r));
 
+// nav toggle
 document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".nav-links");
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
 
-  if (!toggle || !nav) return;
+  if (!navToggle || !navLinks) {
+    console.error("Nav elements not found");
+    return;
+  }
 
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("open");
+  navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
   });
+});
 
-  nav.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("open");
-    });
-  });
+navToggle.addEventListener("click", () => {
+  console.log("clicked");
+  navLinks.classList.toggle("open");
 });
