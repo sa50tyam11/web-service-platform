@@ -47,15 +47,26 @@ if (yearEl) {
 
 // ================= NAV TOGGLE =================
 document.addEventListener("DOMContentLoaded", () => {
-  const navToggle = document.querySelector(".nav-toggle");
-  const navLinks = document.querySelector(".nav-links");
+  const toggle = document.querySelector(".nav-toggle");
+  const menu = document.querySelector(".nav-links");
+  const links = menu.querySelectorAll("a");
 
-  if (!navToggle || !navLinks) return;
+  if (!toggle || !menu) return;
 
-  navToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("open");
+    document.body.classList.toggle("nav-open");
+  });
+
+  // 🔥 CLOSE MENU ON LINK CLICK
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("open");
+      document.body.classList.remove("nav-open");
+    });
   });
 });
+
 
 // ================= CONTACT FORM (EmailJS + WhatsApp) =================
 if (window.emailjs) {
