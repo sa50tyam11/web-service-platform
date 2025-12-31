@@ -1,5 +1,5 @@
 // ================= SCROLL REVEAL =================
-const observer = new IntersectionObserver(
+const revealObserver = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -10,7 +10,9 @@ const observer = new IntersectionObserver(
   { threshold: 0.18 }
 );
 
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+document.querySelectorAll(".reveal").forEach(el =>
+  revealObserver.observe(el)
+);
 
 // ================== 3D TILT ==================
 document.querySelectorAll(".tilt-3d").forEach(card => {
@@ -33,9 +35,9 @@ document.querySelectorAll(".tilt-3d").forEach(card => {
 // ================= PRICING FLIP =================
 function flipCard(card) {
   const inner = card.querySelector(".flip-inner");
-  inner.classList.toggle("flipped");
+  if (inner) inner.classList.toggle("flipped");
 }
-window.flipCard = flipCard; // make available to inline onclick
+window.flipCard = flipCard;
 
 // ================= FOOTER YEAR =================
 const yearEl = document.getElementById("year");
@@ -43,90 +45,55 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-// ================= CONTACT FORM (EmailJS + WhatsApp) =================
-
-// Initialize EmailJS (REQUIRED)
-(function () {
-  emailjs.init("oVtWwBC7fHgP0nCP6");
-})();
-
-const contactForm = document.getElementById("contactForm");
-const whatsappBtn = document.getElementById("whatsappBtn");
-
-if (contactForm) {
-  contactForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    // ✅ REAL EmailJS IDs 
-    const serviceId = "service_qej52mu";
-    const templateId = "template_m2m4xcr";
-
-    emailjs
-      .sendForm(serviceId, templateId, contactForm)
-      .then(function () {
-        alert("Message sent successfully! I’ll contact you shortly.");
-        contactForm.reset();
-      })
-      .catch(function (error) {
-        console.error("EmailJS error:", error);
-
-        // ✅ Fallback so you NEVER lose a lead
-        window.location.href =
-          "https://wa.me/917667261838?text=Hi%20REDWORK%2C%20I%20tried%20sending%20a%20message%20from%20your%20website%20but%20the%20email%20didn’t%20go%20through.";
-      });
-  });
-}
-
-// WhatsApp button
-if (whatsappBtn) {
-  whatsappBtn.addEventListener("click", function () {
-    window.open(
-      "https://wa.me/917667261838?text=Hi%20REDWORK%2C%20I%20want%20to%20discuss%20a%20project.",
-      "_blank"
-    );
-  });
-}
-
-
-// WhatsApp button behavior
-if (whatsappBtn && contactForm) {
-  whatsappBtn.addEventListener("click", () => {
-    const name = contactForm.elements["name"]?.value || "";
-    const message = contactForm.elements["message"]?.value || "";
-
-    const encoded = encodeURIComponent(
-      `Hi REDWORK,\n\nMy name is ${name || "(your name)"}.\n\nProject details:\n${message || "(write your project details here)"}`)
-      ;
-
-    const url = `https://wa.me/917667261838?text=${encoded}`;
-    window.open(url, "_blank");
-  });
-}
-// reveal on scroll
-const reveals = document.querySelectorAll('.reveal');
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add('active');
-  });
-});
-reveals.forEach(r => obs.observe(r));
-
-// nav toggle
+// ================= NAV TOGGLE =================
 document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.querySelector(".nav-links");
 
-  if (!navToggle || !navLinks) {
-    console.error("Nav elements not found");
-    return;
-  }
+  if (!navToggle || !navLinks) return;
 
   navToggle.addEventListener("click", () => {
     navLinks.classList.toggle("open");
   });
 });
 
-navToggle.addEventListener("click", () => {
-  console.log("clicked");
-  navLinks.classList.toggle("open");
-});
+// ================= CONTACT FORM (EmailJS + WhatsApp) =================
+if (window.emailjs) {
+  emailjs.init("oVtWwBC7fHgP0nCP6");
+}
+
+const contactForm = document.getElementById("contactForm");
+const whatsappBtn = document.getElementById("whatsappBtn");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", e => {
+    e.preventDefault();
+
+    const serviceId = "service_qej52mu";
+    const templateId = "template_m2m4xcr";
+
+    emailjs
+      .sendForm(serviceId, templateId, contactForm)
+      .then(() => {
+        alert("Message sent successfully!");
+        contactForm.reset();
+      })
+      .catch(() => {
+        window.location.href =
+          "https://wa.me/917667261838?text=Hi%20REDWORK%2C%20I%20tried%20contacting%20you%20via%20your%20website.";
+      });
+  });
+}
+
+if (whatsappBtn) {
+  whatsappBtn.addEventListener("click", () => {
+    const name = contactForm?.elements["name"]?.value || "";
+    const message = contactForm?.elements["message"]?.value || "";
+
+    const encoded = encodeURIComponent(
+      `Hi REDWORK,\n\nMy name is ${name || "(your name)"}.\n\nProject details:\n${message || "(project details)"}`
+    );
+
+    window.open(`https://wa.me/917667261838?text=${encoded}`, "_blank");
+  });
+}
