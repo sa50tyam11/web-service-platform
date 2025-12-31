@@ -890,3 +890,13 @@ body {
 
 
 
+/* FIX: allow nav clicks on mobile */
+.nav-wrap {
+  pointer-events: auto;
+}
+
+/* FIX: hero background must NOT capture clicks */
+.hero-bg,
+.bg-layer {
+  pointer-events: none;
+}
