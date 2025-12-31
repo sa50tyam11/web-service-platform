@@ -32,7 +32,7 @@ body {
 }
 
 /* =========================
-   NAV (FIXED & CLEAN)
+   NAV (FINAL, SAFE)
 ========================= */
 
 .nav-wrap {
@@ -65,11 +65,11 @@ body {
   color: transparent;
 }
 
-/* DESKTOP NAV */
+/* Desktop */
 .nav-links {
   display: flex;
-  list-style: none;
   gap: 18px;
+  list-style: none;
 }
 
 .nav-links a {
@@ -78,7 +78,6 @@ body {
   font-weight: 600;
 }
 
-/* HAMBURGER */
 .nav-toggle {
   display: none;
   background: none;
@@ -88,11 +87,8 @@ body {
   cursor: pointer;
 }
 
-/* =========================
-   MOBILE NAV (REAL FIX)
-========================= */
+/* Mobile */
 @media (max-width: 920px) {
-
   .nav-toggle {
     display: block;
     z-index: 10001;
@@ -103,14 +99,15 @@ body {
     inset: 0;
     background: #040406;
 
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 28px;
 
-    /* 👇 THIS IS THE KEY */
     transform: translateY(-100%);
     transition: transform 0.35s ease;
+    z-index: 10000;
   }
 
   .nav-links.open {
@@ -121,7 +118,12 @@ body {
     font-size: 1.3rem;
     color: #fff;
   }
+
+  body.nav-open {
+    overflow: hidden;
+  }
 }
+
 
 
 /* =========================
@@ -886,14 +888,5 @@ body {
   text-decoration: none;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .services-title {
-    font-size: 30px;
-  }
 
-  .service-card {
-    padding: 22px;
-  }
-}
 

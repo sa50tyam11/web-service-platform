@@ -54,11 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!toggle || !menu) return;
 
   toggle.addEventListener("click", () => {
-    menu.classList.toggle("open");
-    document.body.classList.toggle("nav-open");
+    const isOpen = menu.classList.toggle("open");
+    document.body.classList.toggle("nav-open", isOpen);
   });
 
-  // 🔥 CLOSE MENU ON LINK CLICK
   links.forEach(link => {
     link.addEventListener("click", () => {
       menu.classList.remove("open");
@@ -66,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 // ================= CONTACT FORM (EmailJS + WhatsApp) =================
@@ -108,3 +108,19 @@ if (whatsappBtn) {
     window.open(`https://wa.me/917667261838?text=${encoded}`, "_blank");
   });
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menus = document.querySelectorAll(".nav-links");
+  const toggles = document.querySelectorAll(".nav-toggle");
+
+  console.log("nav-links count:", menus.length);
+  console.log("nav-toggle count:", toggles.length);
+
+  toggles.forEach((toggle, i) => {
+    toggle.addEventListener("click", () => {
+      console.log("clicked toggle", i);
+      menus[i]?.classList.toggle("open");
+    });
+  });
+});
