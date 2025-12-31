@@ -47,24 +47,23 @@ if (yearEl) {
 
 // ================= NAV TOGGLE =================
 document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.querySelector(".nav-toggle");
-  const menu = document.querySelector(".nav-links");
-  const links = menu.querySelectorAll("a");
+  const btn = document.querySelector(".menu-btn");
+  const menu = document.querySelector(".menu");
 
-  if (!toggle || !menu) return;
+  if (!btn || !menu) return;
 
-  toggle.addEventListener("click", () => {
-    const isOpen = menu.classList.toggle("open");
-    document.body.classList.toggle("nav-open", isOpen);
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("open");
   });
 
-  links.forEach(link => {
+  menu.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
       menu.classList.remove("open");
-      document.body.classList.remove("nav-open");
     });
   });
 });
+
+
 
 
 
@@ -109,18 +108,3 @@ if (whatsappBtn) {
   });
 }
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  const menus = document.querySelectorAll(".nav-links");
-  const toggles = document.querySelectorAll(".nav-toggle");
-
-  console.log("nav-links count:", menus.length);
-  console.log("nav-toggle count:", toggles.length);
-
-  toggles.forEach((toggle, i) => {
-    toggle.addEventListener("click", () => {
-      console.log("clicked toggle", i);
-      menus[i]?.classList.toggle("open");
-    });
-  });
-});
